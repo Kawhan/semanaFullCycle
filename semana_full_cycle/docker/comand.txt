@@ -1,0 +1,42 @@
+docker run (nome-container)
+
+A porta 4000 do nosso computador aponta para porta 80 do nginx
+docker run -p 4000:80 nginx 
+
+Executa o bash para entrar em linha comando usando o modo interativo
+docker exec -it (nome_container) bash
+
+Criando um volume para armazenar as informações registradas
+docker run -p 4000:80 -v $(pwd)/html:/usr/share/nginx/html nginx 
+
+Build da imagem   Nome
+docker build -t imagnginxexemplo .
+
+Rodando o mysql 
+
+docker-compose up -d
+
+Vendo quais composes estão rodando
+docker-compose ps
+
+Derrubando meu docker compose 
+
+docker-compose down
+
+
+# GO
+
+Tudo que for relativo ao projeto sem pacotes externos colocamos no internal
+Domain fica o dominio da aplicação os dominios
+Entity tem nossas entidades
+gateway possui contratos com nossas aplicações externas que vamos usar
+Usecase Caso de uso, intenção do usuário que vai usar nossa aplicação
+
+-> chat.go
+É aquilo que representa a entidade de conversasão
+
+-> message.go
+Entidade que é responsavel pela messages
+
+-> model.go possui os modelos
+
